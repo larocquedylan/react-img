@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import AsciiImage from './Component/Home/AsciiImage';
+import Header from './Component/Home/Header';
+import img from './uber.jpeg';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <div className='flex justify-center align-middle'>
+        <AsciiImage imageSrc={img} width={556} height={755} />
+      </div>
+    </>
   );
-}
+};
 
 export default App;
